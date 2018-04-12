@@ -1,4 +1,6 @@
 ---
+# ansible-playbook -i inventory.ini site.yml
+
 # Defines deployment design and assigns role to server groups
 
 - hosts:
