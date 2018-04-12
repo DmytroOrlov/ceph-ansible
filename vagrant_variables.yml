@@ -1,4 +1,5 @@
 ---
+vagrant_disable_synced_folder: true
 
 # DEPLOY CONTAINERIZED DAEMONS
 docker: false
@@ -10,7 +11,7 @@ mds_vms: 0
 rgw_vms: 0
 nfs_vms: 0
 rbd_mirror_vms: 0
-client_vms: 0
+client_vms: 1
 iscsi_gw_vms: 0
 mgr_vms: 0
 

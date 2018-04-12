@@ -66,6 +66,8 @@ ansible_provision = proc do |ansible|
   end
 
   ansible.extra_vars = {
+      monitor_secret: "AQBQn8tUsBHSIBAACVlivUvyNkn2EZREERyZRw==",
+      osd_pool_default_pg_num: 128,
       cluster_network: "#{CLUSTER_SUBNET}.0/24",
       journal_size: 100,
       public_network: "#{PUBLIC_SUBNET}.0/24",
