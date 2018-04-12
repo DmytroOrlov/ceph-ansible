@@ -50,7 +50,7 @@ ansible_provision = proc do |ansible|
   # these aren't supported by Vagrant, see
   # https://github.com/mitchellh/vagrant/issues/3539
   ansible.groups = {
-    'mons'             => (0..NMONS - 1).map { |j| "#{LABEL_PREFIX}mon#{j}" },
+    'mons'             => (0..NOSDS - 1).map { |j| "#{LABEL_PREFIX}osd#{j}" },
     'osds'             => (0..NOSDS - 1).map { |j| "#{LABEL_PREFIX}osd#{j}" },
     'mdss'             => (0..NMDSS - 1).map { |j| "#{LABEL_PREFIX}mds#{j}" },
     'rgws'             => (0..NRGWS - 1).map { |j| "#{LABEL_PREFIX}rgw#{j}" },
@@ -486,7 +486,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                         '--add', 'scsi']
         end
 
-        (0..1).each do |d|
+        (0..0).each do |d|
           vb.customize ['createhd',
                         '--filename', "disk-#{i}-#{d}",
                         '--size', '11000'] unless File.exist?("disk-#{i}-#{d}.vdi")

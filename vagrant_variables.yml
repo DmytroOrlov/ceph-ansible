@@ -1,10 +1,11 @@
 ---
+vagrant_disable_synced_folder: true
 
 # DEPLOY CONTAINERIZED DAEMONS
 docker: false
 
 # DEFINE THE NUMBER OF VMS TO RUN
-mon_vms: 3
+mon_vms: 0
 osd_vms: 3
 mds_vms: 0
 rgw_vms: 0
@@ -32,7 +33,7 @@ eth: 'eth1'
 # Disks
 # For Xenial use disks: [ '/dev/sdb', '/dev/sdc' ]
 # For CentOS7 use disks: [ '/dev/sda', '/dev/sdb' ]
-disks: [ '/dev/sdb', '/dev/sdc' ]
+disks: [ '/dev/sdb' ]
 
 # VAGRANT BOX
 # Ceph boxes are *strongly* suggested. They are under better control and will
