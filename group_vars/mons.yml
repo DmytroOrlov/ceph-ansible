@@ -41,12 +41,12 @@ dummy:
 # CEPHFS #
 ##########
 #cephfs: cephfs # name of the ceph filesystem
-#cephfs_data: cephfs_data # name of the data pool for a given filesystem
-#cephfs_metadata: cephfs_metadata # name of the metadata pool for a given filesystem
+cephfs_data: cephfs_data # name of the data pool for a given filesystem
+cephfs_metadata: cephfs_metadata # name of the metadata pool for a given filesystem
 
-#cephfs_pools:
-#  - { name: "{{ cephfs_data }}", pgs: "" }
-#  - { name: "{{ cephfs_metadata }}", pgs: "" }
+cephfs_pools:
+  - { name: "{{ cephfs_data }}", pgs: "128" }
+  - { name: "{{ cephfs_metadata }}", pgs: "128" }
 
 
 ###############
